@@ -25,6 +25,13 @@ public class Product {
 
     private String nome;
 
-    private Number preco_em_reais;
+    private Integer preco_em_reais;
 
+    private Boolean active;
+
+    public Product(RequestProduct requestProduct){
+        this.nome = requestProduct.nome();
+        this.preco_em_reais = requestProduct.preco_em_reais();
+        this.active = true;
+    }
 }
